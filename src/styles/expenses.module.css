@@ -1,0 +1,68 @@
+/* change the max-height value according to get a smoother closing animation  */
+
+
+.outline{
+    border: solid 1px #828282;
+}
+
+.textColor{
+    color: #2d2d2d;
+}
+
+.plusSign{
+    color: #585858;
+}
+
+.contentColor{
+    color: #545454;
+}
+
+.appearAnimation{
+    overflow: hidden;
+    max-height: 0;
+    margin: 0;
+    opacity: 0;
+    /* opening accord time */
+    transition: max-height .8s ease-in-out;
+}
+
+.fadeIn{
+    /* fading text time */
+    animation: fading 2.6s 1 ;
+    margin: 10px 0;
+    opacity: 1;
+    max-height: var(--maxHeight);
+}
+
+.fadeOut{
+    /* closing accord time */
+    animation: fadeOut .6s 1;
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+        max-height: var(--maxHeight);
+        margin: 10px 0;
+    }
+    100%{
+        opacity: 0;
+        margin: 0;
+        max-height: 0;
+    }
+}
+
+@keyframes fading {
+    0%{
+        opacity: 0;
+        margin: 0;
+    }
+    15%{
+        margin: 10px 0;
+    }
+    90%{
+        opacity: 1;
+    }
+}
+
+
